@@ -52,11 +52,11 @@
                       <span class="date sub-text">comment author name</span>
                     </div>
                   {% for comment in post.comment: %}
-                  div class="commentText">
+
                   <div class="commenterImage">
                     <img src="{{ comment.author.email | gravatar }}"/>
                   </div>
-                  <div>
+                  <div class="commentText">
 
                       <p>{{comment.comment_body|safe}}</p>
                       <span class="date sub-text">{{comment.author.name}}</span>

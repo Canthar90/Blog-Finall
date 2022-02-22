@@ -75,7 +75,7 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def get_all_posts():
     # current = flask_login.current_user
     posts = BlogPost.query.all()
